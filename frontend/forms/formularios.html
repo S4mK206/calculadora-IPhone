@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Forms</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Introducao</legend>
+            <label for="email">E-mail</label>
+            <br>
+            <input type="email" name="email" maxlength="20" placeholder="fulano.dasilva@email.com">
+            <br><br>    
+
+            <label for="Senha">Senha</label>
+            <br>
+            <input type="password" name="Senha">
+            <br><br>
+            <label for="qtd">Quantidade</label>
+            <br>
+            <input type="number" name="qtd" min="0" max="100" placeholder="0 a 100">
+            <br><br>
+
+            <input type="date" min="2024-01-01" max="2024-12-31">
+            <br><br>
+            Tem outra atribuição?
+            <label>
+                <input type="radio" name="atvExtra" value="S">
+                Sim
+            </label>
+            <label>
+                <input type="radio" name="atvExtra"value="N">
+                Não
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Interesses</legend>
+            <label>
+                <input type="checkbox" name="interesse" value="HTML">
+                HTML
+            </label>
+            <label>
+                <input type="checkbox" name="interesse" value="css">
+                CSS
+            </label>
+            <label>
+                <input type="checkbox" name="interesse" value="js">
+                JavaScript
+            </label>
+            <br><br>
+            <label>Escolha a linguagem</label>
+            <br>
+            <select name="linguagem" required multiple size="9">
+                <option value="">Selecione uma opção</option>
+                <optgroup label="frontend">
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="js">JavaScript</option>
+                </optgroup>
+                <optgroup label="backend">
+                    <option value="java">Java</option>
+                    <option value="php">PHP</option>
+                    <option value="python">Python</option>
+                </optgroup>
+            </select>
+
+            <input type="text" name="linguagemList">
+            <datalist id="linguagemList">
+                <option value="html">
+                <option value="css">
+                <option value="js">
+            </datalist>
+        </fieldset>
+        <fieldset>
+            <legend>Mensagem</legend>
+            <textarea name="msg" id="50" cols="50" rows="8" maxlength="255"></textarea>
+            <br><br>
+            <textarea name="msg" id="50" cols="50" rows="8" readonly>
+Contrato de Aluguel 
+1.1 Pagar em dia 
+1.2 Pagar em dinheiro
+            </textarea>
+            <input type="hidden" value="abc123">
+            <br>
+            <input type="submit" value="enviar">
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+@media screen and (min-width: 1000px) and (orientation: landscape) {
+    .cards-container{
+        flex-direction: row;
+    }
+}
+@media screen and (max-width: 800px) {
+    .cards-container{
+     
+       flex-direction: column;
+    }
+    .card{
+        background-color: rgb(30, 60, 90);
+    }
+}@media screen and (max-width: 500px) {
+    .cards-container{
+        flex-direction: row;
+    }
+    .card{
+        background-color: rgb(100, 10, 50);
+    }
+}@media screen and (max-width: 390px) {
+    .cards-container{
+        flex-direction: column;
+    }
+    .card{
+        background-color: rgb(red, green, blue);
+    }
+}
