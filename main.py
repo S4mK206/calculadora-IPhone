@@ -30,17 +30,17 @@ class MeuApp(QMainWindow):
         self.btnDivisao.clicked.connect(lambda: self.definirOperacao(self.divisao))
         self.btnPorcentagem.clicked.connect(self.porcentagem)
 
-        self.btnVirgula.clicked.connect(self.virgula)
+        self.btnVirgula.clicked.connect(lambda: self.btnClicado(self.btnVirgula))
         self.btnPositivoNegativo.clicked.connect(self.sinal)
         self.btnIgual.clicked.connect(self.mostraResultado)
         self.btnClear.clicked.connect(self.limparDisplay)
 
     def mostrarDisplay(self, value):
-        value = str(value).replace('.', ',')
+        value = str(value).replace('.', ',') #transforma tudo que for int em str e mostra no display
         self.outputLabel.setText(value)
 
     def pegarDisplay(self):
-        value = self.outputLabel.text()
+        value = str(self.outputLabel.text())
         value = value.replace(',', '.')
         try:
             value = int(value)
@@ -48,12 +48,27 @@ class MeuApp(QMainWindow):
             value = float(value)
         return value
 
+    def virgula(self):
+        if not '.' in str(self.pegarDisplay()):
+            self.mostrarDisplay(str(self.pegarDisplay()) + '.')
+
     def btnClicado(self, btn):
-        if self.pegarDisplay() == 0:
-            self.mostrarDisplay(btn.text())
+        # Se for inteiro
+        if btn.text() == ',':
+            if isinstance(self.pegarDisplay(), int):
+                ultimoValor = str(self.pegarDisplay())
+                self.mostrarDisplay(ultimoValor + btn.text())
         else:
-            ultimoValor = str(self.pegarDisplay())
-            self.mostrarDisplay(ultimoValor + btn.text())
+            if isinstance(self.pegarDisplay(), int):
+                if self.pegarDisplay() == 0:
+                    self.mostrarDisplay(btn.text())
+            else:
+                ultimoValor = str(self.pegarDisplay())
+                self.mostrarDisplay(ultimoValor + btn.text())
+            # Se for float
+        
+
+
 
     def adicao(self):
         return self.num1 + self.num2
@@ -77,10 +92,6 @@ class MeuApp(QMainWindow):
         if self.op == self.adicao or self.subtrair:
             percento = self.num1 * percento
         self.mostrarDisplay(percento)
-
-    def virgula(self):
-        if not '.' in self.pegarDisplay():
-            self.mostrarDisplay(self.pegarDisplay() + '.')
 
     def limparDisplay(self):
         self.num1 = 0
@@ -111,8 +122,7 @@ class MeuApp(QMainWindow):
 
             self.numResult = self.op()
             self.mostrarDisplay(self.numResult)
-
-        
+       
 if __name__ == '__main__':
     app = QApplication([])
     window = MeuApp()
