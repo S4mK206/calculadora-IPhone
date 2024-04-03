@@ -53,22 +53,22 @@ class MeuApp(QMainWindow):
             self.mostrarDisplay(str(self.pegarDisplay()) + '.')
 
     def btnClicado(self, btn):
-        # Se for inteiro
+        ultimoValor = str( self.pegarDisplay() )
+        #Digitando virgula
         if btn.text() == ',':
-            if isinstance(self.pegarDisplay(), int):
-                ultimoValor = str(self.pegarDisplay())
-                self.mostrarDisplay(ultimoValor + btn.text())
+            if isinstance(self.pegarDisplay(), float):
+                return
+        #Digitando numeros
         else:
+            # Se for numero inteiros
             if isinstance(self.pegarDisplay(), int):
                 if self.pegarDisplay() == 0:
-                    self.mostrarDisplay(btn.text())
+                    ultimoValor = ''
+            # Se for numero float
             else:
-                ultimoValor = str(self.pegarDisplay())
-                self.mostrarDisplay(ultimoValor + btn.text())
-            # Se for float
-        
-
-
+                if self.outputLabel.text()[-1] == ",":
+                    ultimoValor = self.outputLabel.text()
+        self.mostrarDisplay(ultimoValor + btn.text())
 
     def adicao(self):
         return self.num1 + self.num2
