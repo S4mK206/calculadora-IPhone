@@ -1,5 +1,7 @@
 from PyQt5.QtWidgets import *
 from PyQt5.uic import loadUi
+from os import path
+
 
 class MeuApp(QMainWindow):
 
@@ -10,7 +12,7 @@ class MeuApp(QMainWindow):
 
     def __init__(self):
         super().__init__()
-        loadUi('interfaceCalculadora.ui', self)
+        loadUi(self.localPath('interfaceCalculadora.ui'), self)
 
         self.btn0.clicked.connect(lambda: self.btnClicado(self.btn0))
         self.btn1.clicked.connect(lambda: self.btnClicado(self.btn1))
@@ -122,7 +124,10 @@ class MeuApp(QMainWindow):
 
             self.numResult = self.op()
             self.mostrarDisplay(self.numResult)
-       
+
+    def localPath(relativePath):
+        return f'{path.dirname(path.realpath(__file__))}\\{relativePath}'
+
 if __name__ == '__main__':
     app = QApplication([])
     window = MeuApp()
