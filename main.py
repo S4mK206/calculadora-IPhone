@@ -125,7 +125,7 @@ class MeuApp(QMainWindow):
             self.numResult = self.op()
             self.mostrarDisplay(self.numResult)
 
-    def localPath(relativePath):
+    def localPath(self, relativePath):
         return f'{path.dirname(path.realpath(__file__))}\\{relativePath}'
 
 if __name__ == '__main__':
