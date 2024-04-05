@@ -108,5 +108,3 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
     </td>
   </tr>
 </table>
-
-<img ali src="print.png" width="128" alt="print do projeto">
