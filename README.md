@@ -1,15 +1,15 @@
-# Calculadora IPhone
+# Calculadora IPhone <img src="icon.ico" width="32" alt="icone do projeto">
 
-![GitHub repo size](https://img.shields.io/github/repo-size/iuricode/README-template?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
+<div align="center">
 
-<img src="imagem.png" alt="Exemplo imagem">
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![PyQt5](https://img.shields.io/badge/Qt-%23217346.svg?style=for-the-badge&logo=Qt&logoColor=white)
+![SO](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
-> Linha adicional de texto informativo sobre o que o projeto faz. Sua introdução deve ter cerca de 2 ou 3 linhas. Não exagere, as pessoas não vão ler.
+<img src="print.png" width="128" alt="print do projetp">
+</div>
 
+> Projeto desenvolvido durante o periodo do curso Técnico em Desenvolvimento de Sistemas no Senac Sorocaba
 ## 💻 Pré-requisitos
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
@@ -17,12 +17,11 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 - Você instalou a versão mais recente de `<Python 3.12>`
 - Você tem uma máquina `<Windows / Linux>`.
 - Configurado o Ambiente Virtual:
-    - 'python -m venv env'
-    - instala
-    - 
+    - `python -m venv env`
+
 - Instalação das dependências
-    - 'PyQt5'
-    - 'Auto-Py-To-Exe'
+    - `PyQt5`
+    - `Auto-Py-To-Exe`
 
 ### Ajustes e melhorias
 
@@ -109,3 +108,5 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
     </td>
   </tr>
 </table>
+
+<img ali src="print.png" width="128" alt="print do projeto">
